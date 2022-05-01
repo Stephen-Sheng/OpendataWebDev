@@ -45,7 +45,15 @@ function getLocationObj(obj){
 }
 
 function getMap(locationArr){
-    map.setView(locationArr,1000) 
+    map.setView(locationArr,1000)
+    // let marker = L.marker(locationArr).addTo(map);
+    // usage marker demo
+    // var blueMarker = L.marker(locationArr, {
+    //     icon: new L.AwesomeNumberMarkers({
+    //       number: 400, 
+    //       markerColor: "red"
+    //   })}).addTo(map);
+ 
 }
 
 function getNearPolice(location){
