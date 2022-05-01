@@ -43,7 +43,7 @@ function getLocationObj(obj){
 }
 
 function getMap(locationArr){
-    map.options.center = locationArr
+    map.setView(locationArr,1000)
     // Creating a map object
     console.log(map);
     // Creating a Layer object
