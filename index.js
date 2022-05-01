@@ -43,12 +43,5 @@ function getLocationObj(obj){
 }
 
 function getMap(locationArr){
-    map.setView(locationArr,1000)
-    // Creating a map object
-    console.log(map);
-    // Creating a Layer object
-    let layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
-    // Adding layer to the map
-    map.addLayer(layer);
-    
+    map.setView(locationArr,1000) 
 }
