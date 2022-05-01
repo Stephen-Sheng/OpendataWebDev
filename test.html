@@ -14,9 +14,9 @@
 <div class="col-md-3"></div>
 <div class="col-md-6">
     <div class="input-group">
-        <input type="text" class="form-control" placeholder="Enter your Postcode...">
+        <input id= "postcodeInput" type="text" class="form-control" placeholder="Enter your Postcode...">
         <span class="input-group-btn">
-        <button class="btn btn-default" type="button">Search!</button>
+        <button class="btn btn-default" type="button" onclick="search()">Search!</button>
       </span>
     </div>
 </div>
@@ -50,17 +50,18 @@
         crossorigin=""></script>
 <script>
     // Creating map options
-    let mapOptions = {
-        center: [17.385044, 78.486671],
-        zoom: 10
-    }
-    // Creating a map object
-    let map = new L.map('map', mapOptions);
-    // Creating a Layer object
-    let layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
-    // Adding layer to the map
-    map.addLayer(layer);
+    // let mapOptions = {
+    //     center: [17.385044, 78.486671],
+    //     zoom: 10
+    // }
+    // // Creating a map object
+    // let map = new L.map('map', mapOptions);
+    // // Creating a Layer object
+    // let layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+    // // Adding layer to the map
+    // map.addLayer(layer);
 </script>
+<script src="./index.js"></script>
 
 </body>
 
