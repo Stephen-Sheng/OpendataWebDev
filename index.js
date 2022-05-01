@@ -40,8 +40,52 @@ function getLocationObj(obj){
     console.log(obj);
     let locationArr = [obj.data.latitude,obj.data.longitude]
     getMap(locationArr)
+    getNearPolice(locationArr)
+
 }
 
 function getMap(locationArr){
     map.setView(locationArr,1000) 
+}
+
+function getNearPolice(location){
+    let xmlhttp;
+    if (window.XMLHttpRequest) {
+        //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+        xmlhttp = new XMLHttpRequest();
+    }
+    else {
+        // IE6, IE5 浏览器执行代码
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
+            console.log(JSON.parse(xmlhttp.responseText));
+            getPoliceInfo(JSON.parse(xmlhttp.responseText).force)
+        }
+            
+    }
+    xmlhttp.open("GET", `https://data.police.uk/api/locate-neighbourhood?q=${location}`, true);
+    xmlhttp.send();
+
+}
+
+function getPoliceInfo(ID){
+    let xmlhttp;
+    if (window.XMLHttpRequest) {
+        //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+        xmlhttp = new XMLHttpRequest();
+    }
+    else {
+        // IE6, IE5 浏览器执行代码
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
+            console.log(JSON.parse(xmlhttp.responseText));
+        }
+            
+    }
+    xmlhttp.open("GET", `https://data.police.uk/api/forces/${ID}`, true);
+    xmlhttp.send();
 }
