@@ -47,14 +47,7 @@ function getLocationObj(obj) {
 
 function getMap(locationArr) {
     map.setView(locationArr, 16)
-    // let marker = L.marker(locationArr).addTo(map);
-    // usage marker demo
-    // var blueMarker = L.marker(locationArr, {
-    //     icon: new L.AwesomeNumberMarkers({
-    //       number: 400, 
-    //       markerColor: "red"
-    //   })}).addTo(map);
-
+    let marker = L.marker(locationArr).addTo(map);
 }
 
 function getNearPolice(location) {
@@ -135,15 +128,14 @@ function getCrime(location) {
 }
 
 function renderMarker(crimeData) {
+    let markers = L.markerClusterGroup();
     crimeData.forEach((item, index) => {
-        var blueMarker = L.marker([item.location.latitude, item.location.longitude], {
-            icon: new L.AwesomeNumberMarkers({
-                number: 1,
-                markerColor: "blue"
-            })
-        }).addTo(map);
-
+        const circleMarker = L.circleMarker([item.location.latitude, item.location.longitude], { radius: 8 })
+            .bindPopup(`<b>${item.category}</b><br>${item.location.street.name}.`, { maxWidth: "700" })
+        markers.addLayer(circleMarker);
     })
+    map.addLayer(markers);
+
 }
 
 function addInfo(description, url) {
