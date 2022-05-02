@@ -88,8 +88,8 @@ function getPoliceInfo(ID) {
             document.getElementById("info3").innerHTML=JSON.parse(xmlhttp.responseText).description
             document.getElementById("info2").innerHTML= `<a href=${JSON.parse(xmlhttp.responseText).url}>${JSON.parse(xmlhttp.responseText).url}</a>`
             document.getElementById("info1").innerHTML=JSON.parse(xmlhttp.responseText).name
-            document.getElementById("info4").innerHTML= `<p>TEL: ${JSON.parse(xmlhttp.responseText).telephone}</p>`
-            document.getElementById("info5").innerHTML= `<a id="twitter" href="javascript:void(0);"><img src="./images/twitter.png" /></a>`
+            //document.getElementById("info4").innerHTML= `<p>TEL: ${JSON.parse(xmlhttp.responseText).telephone}</p>`
+            document.getElementById("info5").innerHTML= `<a id="twitter" href="javascript:void(0);"><img src="./images/twitter.svg" /></a>`
             document.getElementById("twitter").onclick = function (){
                 for (let i = 0; i < JSON.parse(xmlhttp.responseText).engagement_methods.length; ++i){
                     if(JSON.parse(xmlhttp.responseText).engagement_methods[i].title.search(/twitter/i) >= 0){
@@ -98,7 +98,7 @@ function getPoliceInfo(ID) {
                 }
             }
 
-            document.getElementById("info6").innerHTML= `<a id="facebook" href="javascript:void(0);"><img src="./images/facebook.png" /></a>`
+            document.getElementById("info6").innerHTML= `<a id="facebook" href="javascript:void(0);"><img src="./images/facebook.svg" /></a>`
             document.getElementById("facebook").onclick = function (){
                 for (let i = 0; i < JSON.parse(xmlhttp.responseText).engagement_methods.length; ++i){
                     if(JSON.parse(xmlhttp.responseText).engagement_methods[i].title.search(/facebook/i) >= 0){
@@ -107,7 +107,7 @@ function getPoliceInfo(ID) {
                 }
             }
 
-            document.getElementById("info7").innerHTML= `<a id="youtube" href="javascript:void(0);"><img src="./images/youtube.png" /></a>`
+            document.getElementById("info7").innerHTML= `<a id="youtube" href="javascript:void(0);"><img src="./images/youtube.svg" /></a>`
             document.getElementById("youtube").onclick = function (){
                 for (let i = 0; i < JSON.parse(xmlhttp.responseText).engagement_methods.length; ++i){
                     if(JSON.parse(xmlhttp.responseText).engagement_methods[i].title.search(/youtube/i) >= 0){
@@ -157,12 +157,4 @@ function renderMarker(crimeData) {
     })
     map.addLayer(markers);
 
-}
-
-function addInfo(description, url) {
-    document.getElementById("info1").innerHTML = description
-    document.getElementById("info2").innerHTML = url
-    document.getElementById("info3").innerHTML = description
-    document.getElementById("info4").innerHTML = description
-    document.getElementById("info5").innerHTML = description
 }
