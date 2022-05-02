@@ -39,6 +39,7 @@ function search() {
 function getLocationObj(obj){
     console.log(obj);
     let locationArr = [obj.data.latitude,obj.data.longitude]
+    getCrime(locationArr)
     getMap(locationArr)
     getNearPolice(locationArr)
 
@@ -96,4 +97,8 @@ function getPoliceInfo(ID){
     }
     xmlhttp.open("GET", `https://data.police.uk/api/forces/${ID}`, true);
     xmlhttp.send();
+}
+
+function getCrime(location){
+    
 }
