@@ -83,9 +83,31 @@ function getPoliceInfo(ID){
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
             console.log(JSON.parse(xmlhttp.responseText));
+            document.getElementById("info3").innerHTML=JSON.parse(xmlhttp.responseText).description
+            document.getElementById("info2").innerHTML= `<a href=${JSON.parse(xmlhttp.responseText).url}>${JSON.parse(xmlhttp.responseText).url}</a>`
+            document.getElementById("info1").innerHTML=JSON.parse(xmlhttp.responseText).name
+            document.getElementById("info4").innerHTML=JSON.parse(xmlhttp.responseText).telephone
+            // document.getElementById("info5").innerHTML=JSON.parse(xmlhttp.responseText).engagement_methods[0].title
+            // document.getElementById("info6").innerHTML=JSON.parse(xmlhttp.responseText).engagement_methods[0].url
+            // document.getElementById("info7").innerHTML=JSON.parse(xmlhttp.responseText).engagement_methods[0].description
+            //
+
+
+
+
         }
             
     }
     xmlhttp.open("GET", `https://data.police.uk/api/forces/${ID}`, true);
     xmlhttp.send();
+}
+
+function addInfo(description,url){
+    document.getElementById("info1").innerHTML=description
+    document.getElementById("info2").innerHTML=url
+    document.getElementById("info3").innerHTML=description
+    document.getElementById("info4").innerHTML=description
+    document.getElementById("info5").innerHTML=description
+
+
 }
