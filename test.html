@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+          integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+          crossorigin=""/>
+
+    <title>bootstrap起步</title>
+</head>
+<body>
+<div class="row">
+<div class="col-md-3"></div>
+<div class="col-md-6">
+    <div class="input-group">
+        <input id= "postcodeInput" type="text" class="form-control" placeholder="Enter your Postcode...">
+        <span class="input-group-btn">
+        <button class="btn btn-default" type="button" onclick="search()">Search!</button>
+      </span>
+    </div>
+</div>
+<div class="col-md-3"></div>
+</div>
+
+<div class="row">
+<div class="col-md-3"></div>
+<div class="col-md-6">
+    <div id="map" style="width: 900px;height: 580px"></div>
+</div>
+<div class="col-md-3"></div>
+</div>
+
+<div class="row">
+<div class="col-md-3"></div>
+<div class="col-md-6">
+    <h3 id="info1"></h3>
+    <div id="info2" ></div>
+    <p id="info3"></p>
+    <p id="info4"></p>
+</div>
+<div class="col-md-3"></div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+        crossorigin=""></script>
+<script src="./index.js"></script>
+
+</body>
+
+</html>
