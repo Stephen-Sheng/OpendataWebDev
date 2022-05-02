@@ -89,7 +89,7 @@ function getPoliceInfo(ID) {
             document.getElementById("info2").innerHTML= `<a href=${JSON.parse(xmlhttp.responseText).url}>${JSON.parse(xmlhttp.responseText).url}</a>`
             document.getElementById("info1").innerHTML=JSON.parse(xmlhttp.responseText).name
             document.getElementById("info4").innerHTML= `<p>TEL: ${JSON.parse(xmlhttp.responseText).telephone}</p>`
-            document.getElementById("info5").innerHTML= `<a id="twitter" href="javascript:void(0);"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAFwAXAMBEQACEQEDEQH/xAAbAAEBAQADAQEAAAAAAAAAAAABAAIEBQcGA//EADMQAAIBAgQDBQUJAQAAAAAAAAABAgMRBAUhMQYSQRMUYXGBJFGRobEiIzNTYnKC0dIV/8QAGgEBAAIDAQAAAAAAAAAAAAAAAAEEAgUGA//EACsRAQACAQIEBQQCAwAAAAAAAAABAgMEEQUSITEiUWGB0ROh4fAjsRRxkf/aAAwDAQACEQMRAD8A9lArgQQgEJQEBAQAAgQAEJIBAAIBCUBAQAAoAAFK+wCEICAgkgQEBAQF0AAMwVkShpECAgEJAHAxWd5Zg6zo4nG0oVFvG92vO2xYx6XNkjmrWdlbJq8GOeW1o3culiaNegq9GrTnRavzxknG3meNqWrblmOr2rkravPWd4fopKUU4tNNXTXUxZxO5AgKwGEEK4GkEvm+OauIoZdha+FnKm6WJUnKPTR2+ZsuGVpfLat47w1fFbXpirak7bSxkvGGFxEI0sythq607S33cv8APrp4mWp4Zek74usff8sNNxTHeNsvSft+HZZ/mPd8hxOKwVWE5cqUJ05KVrtK68rlbS4OfUVpeFrV5+TT2vjn9l5dvq93udQ5Rz8loV8ZmFHCUYwqc0+bs60n2d0r3klvZIr6m1MeOb26f67rGmpbJkilevpPb3eq0ozjCKqT55Jayta78jlZmN+jr6xMR1bMUgkFwhkBAQl0nF8cW8nnLCJTUXetTcFJShbXTw0enuLugnH9aIv7T6qHEoyfQmae8ejzVHTOWSSWyAgPpOAsPKrnUq1vs0KMm34vRfK/wNbxW8Rg5fOW04TSbZ+byj+3odmc66RAFyQXXUAAgG+gQGrxau14oEvNM/ybMcFiKtavTdWi3fvFOCUWv1JLRnTaTVYclYrWdp8nK6vSZsVptaN48/nZ0xdUjGMpyUYRcpSdlFK7b9yEzERvJETPSHp/C2Uf8jLVCql3iq+eq10fSPp9bnL63U/Xy7x2js6vQab/AB8W0957u4uU11lskDAAACvqAoDjY+ljKlL2DFQoVF+ZT54v+j1xWxxP8kbx6Ts8c1csx/HbafWN3xmbZLxNjantT73FO8VCrFRX8Xb6G50+q0WOPB4fafy0Wo0muyT4/F7xt/zo4+G4PzarJKrClh49XOom/hG5634np69t5/fV504XqLT4oiPf4fVZFw7hMpkqt+3xNvxZK3L+1dPqanVa7Jn8Pavl8txpNBj0/i728/h3qZRX0wAkD2AyA2AAECAluBS3QQuoSebQCvcAbAtwCwEBAQAmBqIQXsEsyAwr3JYtrYhkUwJsA9QF+AAgACbAoy8AG4A2gAB9QJMBuAXAQIAAGBMBewGbaAJIiA9AIDIH/9k=" /></a>`
+            document.getElementById("info5").innerHTML= `<a id="twitter" href="javascript:void(0);"><img src="./images/twitter.png" /></a>`
             document.getElementById("twitter").onclick = function (){
                 for (let i = 0; i < JSON.parse(xmlhttp.responseText).engagement_methods.length; ++i){
                     if(JSON.parse(xmlhttp.responseText).engagement_methods[i].title.search(/twitter/i) >= 0){
@@ -98,7 +98,7 @@ function getPoliceInfo(ID) {
                 }
             }
 
-            document.getElementById("info6").innerHTML= `<a id="facebook" href="javascript:void(0);"><img src="https://scontent-lhr8-1.xx.fbcdn.net/v/t39.8562-6/109960336_274477960450922_1306319190754819753_n.png?_nc_cat=107&ccb=1-5&_nc_sid=6825c5&_nc_ohc=NvqfAYAu72gAX90NfpE&_nc_ht=scontent-lhr8-1.xx&oh=00_AT_fiih0fYOkCebTcQBxkOgPXsB1SdpHrH6yaVVL8L0mhw&oe=6273E6B0" /></a>`
+            document.getElementById("info6").innerHTML= `<a id="facebook" href="javascript:void(0);"><img src="./images/facebook.png" /></a>`
             document.getElementById("facebook").onclick = function (){
                 for (let i = 0; i < JSON.parse(xmlhttp.responseText).engagement_methods.length; ++i){
                     if(JSON.parse(xmlhttp.responseText).engagement_methods[i].title.search(/facebook/i) >= 0){
@@ -107,7 +107,7 @@ function getPoliceInfo(ID) {
                 }
             }
 
-            document.getElementById("info7").innerHTML= `<a id="youtube" href="javascript:void(0);"><img src="https://www.gstatic.com/youtube/img/branding/youtubelogo/svg/youtubelogo.svg" /></a>`
+            document.getElementById("info7").innerHTML= `<a id="youtube" href="javascript:void(0);"><img src="./images/youtube.png" /></a>`
             document.getElementById("youtube").onclick = function (){
                 for (let i = 0; i < JSON.parse(xmlhttp.responseText).engagement_methods.length; ++i){
                     if(JSON.parse(xmlhttp.responseText).engagement_methods[i].title.search(/youtube/i) >= 0){
@@ -139,6 +139,7 @@ function getCrime(location) {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             console.log(JSON.parse(xmlhttp.responseText));
             renderMarker(JSON.parse(xmlhttp.responseText))
+            document.getElementById("info0").innerHTML=JSON.parse(xmlhttp.responseText).length + " Crimes in 1 mile radius"
         }
 
     }
