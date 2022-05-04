@@ -1,6 +1,6 @@
 let mapOptions = {
-    center: [17.385044, 78.486671],
-    zoom: 10
+    center: [50.934099, -1.395714],
+    zoom: 7
 }
 let map = new L.map('map', mapOptions);
 let layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
