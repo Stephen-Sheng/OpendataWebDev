@@ -47,7 +47,7 @@ function getLocationObj(obj) {
 
 function getMap(locationArr) {
     map.setView(locationArr, 16)
-    let marker = L.marker(locationArr).addTo(map);
+    let marker = L.marker(locationArr).bindPopup("<b>Your location</b><br>Your location").addTo(map);
 }
 
 function getNearPolice(location) {
