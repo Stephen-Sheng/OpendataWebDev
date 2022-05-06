@@ -19,9 +19,9 @@
 <body>
     <div class="row">
         <div class="col-md-3" style="margin-left: 1%;margin-top: 1%;">
-            <img id="logo" src= "./images/logo-span.jpeg"/>
+            <img id="logo" src="./images/logo-span.jpeg" />
         </div>
-        <div class="col-md-6" style="text-align: center;" >
+        <div class="col-md-6" style="text-align: center;">
             <h1>Crime Map</h1>
         </div>
     </div>
@@ -40,14 +40,55 @@
     </div>
 
     <div class="row">
-        <div class="col-md-2" style="margin-left: 1%;">
-            <p class="text-info" style="font-family: Garamond, serif; font-size: 22px;">Just enter the postcode and click search, then you will get the crime statistics and the nearest police station in that area.</p>
+        <div class="col-md-3" style="margin-left: 1%;">
+            <p class="text-info" style="font-family: Garamond, serif; font-size: 22px;">Just enter the postcode and
+                click search, then you will get the crime statistics and the nearest police station in that area.</p>
         </div>
         <div class="col-md-6">
-            <div id="map" style="width: 1280px;height: 580px;margin-top: 5%;"></div>
+            <div id="map" style="width: 880px;height: 580px;margin-top: 5%;"></div>
         </div>
-        <div class="col-md-4">
-            <!-- <img id="figure1" src="./images/figure1.jpeg" alt=""> -->
+        <div class="col-md-3">
+            <select id="type" onchange="handleSelectType()">
+                <option value="en" selected disabled>Please Select the crime type</option>
+            </select>
+            <select id="date" onchange="handleSelectDate()">
+                <option value="2,2022">February 2022</option>
+                <option value="1,2022">January 2022</option>
+                <option value="12,2021">December 2021</option>
+                <option value="11,2021">November 2021</option>
+                <option value="10,2021">October 2021</option>
+                <option value="9,2021">September 2021</option>
+                <option value="8,2021">August 2021</option>
+                <option value="7,2021">July 2021</option>
+                <option value="6,2021">June 2021</option>
+                <option value="5,2021">May 2021</option>
+                <option value="4,2021">April 2021</option>
+                <option value="3,2021">March 2021</option>
+                <option value="2,2021">February 2021</option>
+                <option value="1,2021">January 2021</option>
+                <option value="12,2020">December 2020</option>
+                <option value="11,2020">November 2020</option>
+                <option value="10,2020">October 2020</option>
+                <option value="9,2020">September 2020</option>
+                <option value="8,2020">August 2020</option>
+                <option value="7,2020">July 2020</option>
+                <option value="6,2020">June 2020</option>
+                <option value="5,2020">May 2020</option>
+                <option value="4,2020">April 2020</option>
+                <option value="3,2020">March 2020</option>
+                <option value="2,2020">February 2020</option>
+                <option value="1,2020">January 2020</option>
+                <option value="12,2019">December 2019</option>
+                <option value="11,2019">November 2019</option>
+                <option value="10,2019">October 2019</option>
+                <option value="9,2019">September 2019</option>
+                <option value="8,2019">August 2019</option>
+                <option value="7,2019">July 2019</option>
+                <option value="6,2019">June 2019</option>
+                <option value="5,2019">May 2019</option>
+                <option value="4,2019">April 2019</option>
+                <option value="3,2019">March 2019</option>
+            </select>
         </div>
     </div>
 
@@ -73,19 +114,19 @@
     <footer class="bg-light text-center text-lg-start" style="margin-top: 3%;margin-bottom: 2%;">
         <!-- Copyright -->
         <div class="text-center p-3">
-          © 2022 Copyright:
-          <a class="text-dark" href="https://www.southampton.ac.uk/">University of Southampton</a>
+            © 2022 Copyright:
+            <a class="text-dark" href="https://www.southampton.ac.uk/">University of Southampton</a>
         </div>
         <!-- Copyright -->
-      </footer>
-
-
+    </footer>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
         integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
         crossorigin=""></script>
     <script src="./Leaflet.markercluster-1.4.1//dist/leaflet.markercluster.js"></script>
     <script src="./numberMarker/leaflet_awesome_number_markers.js"></script>
-
+    <script src="./moment.js"></script>
     <script src="./index.js"></script>
 
 </body>
